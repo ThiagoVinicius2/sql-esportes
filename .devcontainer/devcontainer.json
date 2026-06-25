@@ -1,0 +1,16 @@
+{
+  "name": "SQL Esportes (PostgreSQL)",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "forwardPorts": [5432],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-pg"
+      ]
+    }
+  },
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y postgresql-client"
+}
