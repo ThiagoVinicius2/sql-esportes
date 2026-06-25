@@ -1,0 +1,13 @@
+{
+  "sqltools.connections": [
+    {
+      "name": "Esportes DB",
+      "driver": "PostgreSQL",
+      "server": "localhost",
+      "port": 5432,
+      "database": "esportes",
+      "username": "aluno",
+      "password": "senha123"
+    }
+  ]
+}
