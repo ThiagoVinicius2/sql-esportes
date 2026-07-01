@@ -1,0 +1,17 @@
+# Variáveis de ambiente e segredos
+.env
+*.env
+
+# Dumps e backups do banco
+*.sql.bak
+*.dump
+*.backup
+
+# Arquivos temporários e de sistema
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Dados do PostgreSQL (caso algum dia rode fora do Docker)
+pgdata/
