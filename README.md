@@ -102,12 +102,22 @@ Os demais arquivos (`04` a `11`) podem ser executados individualmente para explo
 
 Modelagem e DDL · DML (INSERT/UPDATE/DELETE) · comportamentos de `ON DELETE` (CASCADE, SET NULL, RESTRICT) · SELECT, WHERE, ORDER BY, DISTINCT · operadores e busca de texto (LIKE/ILIKE) · tratamento de NULL · agregações (GROUP BY, HAVING) · todos os tipos de JOIN · subqueries e CTEs · window functions · views e materialized views · índices e leitura de planos de execução · transações e ACID · funções e triggers em PL/pgSQL · análise de dados com SQL.
 
-## 📊 Destaques analíticos
+## 📊 Exemplo de resultado
 
-- **Classificação completa** do campeonato (pontos, saldo, ranking) numa única consulta combinando UNION ALL, CASE, CTEs e window function
-- **Artilharia** com ranking por DENSE_RANK
-- **Aproveitamento (%)** por time
-- **Análise de gols** por período do jogo e tipo
+Classificação do campeonato gerada por `sql/11_projeto_analitico.sql` — uma única consulta que combina `UNION ALL`, `CASE`, CTEs encadeadas, `JOIN` e a window function `ROW_NUMBER`:
+
+| Pos | Time | J | Pts | V | E | D | GP | GC | SG |
+|----:|------|--:|----:|--:|--:|--:|---:|---:|---:|
+| 1 | Internacional | 3 | 7 | 2 | 1 | 0 | 6 | 3 | +3 |
+| 2 | Flamengo | 3 | 7 | 2 | 1 | 0 | 5 | 2 | +3 |
+| 3 | Atlético-MG | 3 | 5 | 1 | 2 | 0 | 7 | 5 | +2 |
+| 4 | São Paulo | 3 | 4 | 1 | 1 | 1 | 6 | 4 | +2 |
+| 5 | Corinthians | 3 | 4 | 1 | 1 | 1 | 3 | 3 | 0 |
+| 6 | Botafogo | 3 | 3 | 1 | 0 | 2 | 4 | 6 | -2 |
+| 7 | Palmeiras | 3 | 2 | 0 | 2 | 1 | 2 | 3 | -1 |
+| 8 | Grêmio | 3 | 0 | 0 | 0 | 3 | 1 | 8 | -7 |
+
+**Artilheiros:** Hulk (CAM) 5 gols · Rafael Borré (INT) 4 · Calleri (SAO) e Tiquinho Soares (BOT) 3.
 
 ## 👤 Autor
 
